@@ -1,0 +1,6 @@
+1- Sort games from full data of rawg not only from 20 arrays
+2- Infinite loading
+3- Skeleton
+4- Search 
+5- Authentication
+6- collections on based of Authentication

@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: rgba(255, 255, 255, 0.87);
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  background-color: #151515;
+}
+
+body {
+  background-color: #151515;
+}
+
+/* Simple */
+/* ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: rgba(0, 0, 0, .9);
+}
+ */
+
+/* customSelectStyles.css */
+/* Styling for the control (container) of the Select */
+.react-select__control {
+  background-color: #202020;
+  border: 1px solid #202020;
+  border-radius: 4px;
+  color: white;
+}
+
+/* Styling for the options in the dropdown */
+.react-select__option {
+  background-color: #202020;
+  color: inherit;
+}
+
+/* Styling for the selected option */
+.react-select__option--is-selected {
+  background-color: #2ecc71;
+  color: white;
+}
+
+/* Styling for the single selected value */
+.react-select__single-value {
+  color: white;
+}

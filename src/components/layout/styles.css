@@ -1,0 +1,85 @@
+/* YourComponent.module.css (or any CSS file of your choice) */
+:root {
+  --black: #04152d;
+  --black2: #041226;
+  --black3: #020c1b;
+  --black-lighter: #1c4b91;
+  --black-light: #173d77;
+}
+
+/* For .react-select-container.genresDD */
+.react-select-container.orderBy {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  /* For .react-select-container.orderBy on medium-sized screens and above */
+  .react-select-container.orderBy {
+    max-width: 500px;
+    min-width: 250px;
+  }
+}
+
+/* For .react-select-container.sortbyDD */
+.react-select-container.sortbyDD {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  /* For .react-select-container.sortbyDD on medium-sized screens and above */
+  .react-select-container.sortbyDD {
+    width: 250px;
+  }
+}
+
+/* For .react-select__control */
+.react-select__control {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  background-color: var(--black-light);
+  border-radius: 20px;
+}
+
+/* For .react-select__value-container .react-select__placeholder and .react-select__input-container */
+.react-select__value-container .react-select__placeholder,
+.react-select__value-container .react-select__input-container {
+  color: white;
+  margin: 0 10px;
+}
+
+/* For .react-select__single-value */
+.react-select__single-value {
+  color: white;
+}
+
+/* For .react-select__multi-value */
+.react-select__multi-value {
+  background-color: var(--black3);
+  border-radius: 10px;
+}
+
+/* For .react-select__multi-value__label */
+.react-select__multi-value__label {
+  color: white;
+}
+
+/* For .react-select__multi-value__remove */
+.react-select__multi-value__remove {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+/* For .react-select__multi-value__remove on hover */
+.react-select__multi-value__remove:hover {
+  color: var(--black-lighter);
+}
+
+/* For .react-select__menu */
+.react-select__menu {
+  top: 40px;
+  margin: 0;
+  padding: 0;
+}

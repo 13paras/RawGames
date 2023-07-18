@@ -1,0 +1,16 @@
+.custom-toast {
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+}
+
+.custom-toast.toast-success {
+  background-color: green;
+}
+
+.custom-toast.toast-error {
+  background-color: red;
+}
