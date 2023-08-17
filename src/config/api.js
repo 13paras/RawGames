@@ -9,6 +9,5 @@ export const fetchDataFromApi = async (url, params) => {
       params,
     },
   });
-  console.log(url);
   return data;
 };

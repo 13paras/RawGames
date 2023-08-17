@@ -27,7 +27,7 @@ const GenreListings = () => {
   const [pageNum, setPageNum] = useState(1);
   const [gamesData, setGamesData] = useState(null);
   const [showTags, setShowTags] = useState(false);
-  const [orderBy, setOrderBy] = useState("updated");
+  const [orderBy, setOrderBy] = useState("popularity");
   const [loading, setLoading] = useState(true);
   const [infiniteScrollLoading, setInfiniteScrollLoading] = useState(false);
 

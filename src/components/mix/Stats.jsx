@@ -4,9 +4,7 @@ const Stats = ({ data }) => {
     <div className='stats stats-vertical my-4 bg-base-200 shadow lg:stats-horizontal'>
       <div className='stat place-items-center'>
         <div className='stat-title'>Rating</div>
-        <div className='stat-value'>
-          {data?.rating}/{data?.rating_top}
-        </div>
+        <div className='stat-value'>{data?.rating}</div>
         <div className='stat-desc'>From January 1st to February 1st</div>
       </div>
 

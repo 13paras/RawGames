@@ -1,4 +1,3 @@
-import React from "react";
 import Sidebar from "../components/layout/Sidebar";
 import Discover from "../components/layout/Discover";
 import { Route, Routes } from "react-router-dom";
@@ -11,9 +10,11 @@ import Tags from "./Tags";
 
 const Home = () => {
   return (
-    <div className='flex h-[calc(100%-5rem)] flex-row  lg:mx-8'>
+    <div className='flex h-[calc(100%-5rem)] flex-row lg:mx-8'>
       <div className='flex'>
-        <Sidebar />
+        <div>
+          <Sidebar />
+        </div>
         <div className='w-[calc(100%-240px] h-full flex-1 overflow-y-auto'>
           <Routes>
             <Route path='/genres' element={<Genres />} />

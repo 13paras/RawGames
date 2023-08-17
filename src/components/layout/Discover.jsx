@@ -99,9 +99,9 @@ const Discover = () => {
     return <Spinner />;
   }
   return (
-    <>
+    <main>
       <div className='mx-6 items-center justify-between lg:flex'>
-        <h2 className='container mx-auto my-7 ml-10 text-4xl font-extrabold capitalize'>
+        <h2 className='my-7 ml-10 text-6xl font-extrabold '>
           New And Trending
         </h2>
         <Select
@@ -132,12 +132,8 @@ const Discover = () => {
             </>
           ))}
       </InfiniteScroll>
-    </>
+    </main>
   );
 };
 
 export default Discover;
-
-/* <button className="w-48 bg-zinc-700 py-1 flex justify-center rounded-lg">
-            <span className="loading loading-spinner text-accent "></span>
-          </button> */

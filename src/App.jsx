@@ -25,9 +25,9 @@ function App() {
     return <Spinner />;
   }
   return (
-    <main>
+    <>
       <BrowserRouter>
-        <div className='flex h-full flex-col'>
+        <div className=''>
           <Header />
           <Routes>
             <Route path='/*' element={<Home />} />
@@ -35,7 +35,7 @@ function App() {
         </div>
       </BrowserRouter>
       <ToasterComponent />
-    </main>
+    </>
   );
 }
 

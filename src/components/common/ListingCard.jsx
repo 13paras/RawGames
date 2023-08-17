@@ -27,38 +27,39 @@ const ListingCard = ({ info }) => {
     }
   });
   return (
-    <div className=' w-[24rem] rounded-lg border border-gray-700 shadow-lg shadow-black'>
-      <div
-        className='hero max-h-full bg-black'
-        style={{
-          backgroundImage: `url(${info.image_background})`,
-        }}
-      >
+    <>
+      <div className='w-[24rem] rounded-lg border border-gray-700 shadow-lg shadow-black'>
         <div
+          className='hero max-h-full bg-black'
           style={{
-            // backgroundColor: "rgb(32, 32, 32)",
-            backgroundImage: `linear-gradient(rgba(32, 32, 32, 0.5), rgb(32, 32, 32) 80%)`,
+            backgroundImage: `url(${info.image_background})`,
           }}
-          className='hero-overlay bg-opacity-25'
-        ></div>
-        <div className='hero-content h-full w-[350px] text-base text-white'>
-          <div className='w-full'>
-            <Link to={`/genreListing/${info?.id}`}>
-              <h1 className='mb-8 text-center text-2xl font-bold underline underline-offset-8 transition-all duration-300 ease-in-out hover:text-gray-400'>
-                {info?.name}
-              </h1>
-            </Link>
-            <div
-              className={`${styles.flexItems} mb-8 border-b-[1px] border-gray-700 pb-2 `}
-            >
-              <h5 className='text-gray-300'>Popular items</h5>
-              <span> {info?.games_count} </span>
+        >
+          <div
+            style={{
+              backgroundImage: `linear-gradient(rgba(32, 32, 32, 0.5), rgb(32, 32, 32) 80%)`,
+            }}
+            className='hero-overlay bg-opacity-25'
+          ></div>
+          <div className='hero-content h-full w-[350px] text-base text-white'>
+            <div className='w-full'>
+              <Link to={`/genreListing/${info?.id}`}>
+                <h1 className='mb-8 text-center text-2xl font-bold underline underline-offset-8 transition-all duration-300 ease-in-out hover:text-gray-400'>
+                  {info?.name}
+                </h1>
+              </Link>
+              <div
+                className={`${styles.flexItems} mb-8 border-b-[1px] border-gray-700 pb-2 `}
+              >
+                <h5 className='text-gray-300'>Popular items</h5>
+                <span> {info?.games_count} </span>
+              </div>
+              <ul className='space-y-2'>{popularGames}</ul>
             </div>
-            <ul className='space-y-2'>{popularGames}</ul>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

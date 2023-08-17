@@ -13,13 +13,16 @@ const Search = () => {
     }
   };
   return (
-    <form onSubmit={onSubmitHandler} className='flex w-full justify-center'>
+    <form
+      onSubmit={onSubmitHandler}
+      className='flex w-full justify-center text-xs md:text-base'
+    >
       <input
         onChange={(e) => setSearchInput(e.target.value)}
         value={searchInput}
         type='text'
         placeholder='search for games'
-        className='input-primary input w-full max-w-sm rounded-2xl focus:outline-none lg:max-w-xl'
+        className='input-primary input w-full max-w-[10rem] rounded-xl text-xs focus:outline-none md:max-w-sm md:rounded-2xl md:text-base lg:max-w-xl'
       />
     </form>
   );

@@ -10,17 +10,11 @@ import PlayIcon from "../assets/icons8-play-48.png";
 const GameDetails = () => {
   const { gameId } = useParams();
   const { data, loading } = useFetch(`games/${gameId}`);
-  const { data: gamesVideos, loading: gamesVideosLoading } = useFetch(
-    `games/${gameId}/movies`
-  );
+  const { data: gamesVideos } = useFetch(`games/${gameId}/movies`);
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
   const [readMore, setReadMore] = useState(false);
-  useEffect(() => {
-    // console.log(gamesVideos);
-    console.log(htmlToText(data?.description).length);
-  }, []);
-  // console.log(show);
+
   if (loading) {
     return <p>Loading...</p>;
   }

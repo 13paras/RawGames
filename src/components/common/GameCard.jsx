@@ -1,72 +1,57 @@
 /* eslint-disable react/prop-types */
 import dayjs from "dayjs";
-import React, { useState } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Autoplay,
-  Navigation,
-  Pagination,
-  EffectCreative,
-} from "swiper/modules";
-import { Link, useNavigate } from "react-router-dom";
-import imageNotAvailable from "../../assets/2953962.jpg";
+import { Autoplay, Pagination, EffectCreative } from "swiper/modules";
+import { Link } from "react-router-dom";
 import LazyLoad from "./LazyLoad";
+import { AiFillStar } from "react-icons/ai";
 
 const GameCard = ({ item }) => {
+  console.log(item?.short_screenshots);
   return (
     <>
-      <div className='my-4 max-w-md rounded-lg border border-gray-200 bg-white transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-lg hover:shadow-zinc-600 dark:border-zinc-700 dark:bg-zinc-800 lg:max-w-[300px]'>
+      <div className='my-4 max-w-md rounded-lg border border-zinc-600 bg-zinc-800 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-zinc-600 lg:max-w-[300px]'>
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
           autoplay={{
-            delay: 3000,
+            delay: 2000,
             disableOnInteraction: false,
-            pauseOnMouseEnter: false,
+            pauseOnMouseEnter: true,
           }}
+          allowTouchMove={false}
           pagination={{
             clickable: true,
           }}
           modules={[Autoplay, Pagination, EffectCreative]}
         >
           {item?.short_screenshots?.map((image, index) => {
-            const styles = `h-[12rem] w-full rounded-t-lg object-fill lg:h-[10rem] lg:w-[24rem] ${
-              !image?.image && "bg-zinc-700"
-            } `;
             return (
               <>
                 <SwiperSlide key={index}>
                   <LazyLoad image={image} />
-                  {/*  <img
-                  key={image.id}
-                  className={`h-[12rem] w-full rounded-t-lg object-fill lg:h-[10rem] lg:w-[24rem] ${
-                    !image?.image && "bg-zinc-700"
-                  } `}
-                  src={image.image ? image.image : imageNotAvailable}
-                  alt=''
-                /> */}
                 </SwiperSlide>
               </>
             );
           })}
         </Swiper>
         <div className='p-5'>
-          <div
-            className='radial-progress bg-base-300 text-sm text-accent'
-            style={{
-              "--value": `${Math.floor(item.rating * 10)}`,
-              "--size": "3rem",
-            }}
-          >
-            {Math.floor(item.rating * 10)}%
+          <div className='flex justify-between '>
+            <span className='space-x- flex items-center text-lg'>
+              <AiFillStar fill='yellow' size={23} className='mr-1' />
+              {item.rating.toFixed(1)}
+            </span>
+            <span className='ml-2 rounded-md border border-emerald-700 px-3 text-lg font-medium text-emerald-700'>
+              {item?.metacritic}
+            </span>
           </div>
           <Link to={`/game/details/${item.id}`}>
-            <h5 className='mb-2 line-clamp-1 text-2xl font-bold tracking-tight text-gray-900 hover:text-gray-400 dark:text-white'>
+            <h2 className='mb-2 line-clamp-1  items-center text-2xl font-bold tracking-tight text-gray-900 hover:text-gray-400 dark:text-white'>
               {item.name}
-            </h5>
+            </h2>
           </Link>
 
           <ul className='space-x-3'>
@@ -95,3 +80,14 @@ const GameCard = ({ item }) => {
 };
 
 export default GameCard;
+
+{
+  /*  <img
+  key={image.id}
+  className={`h-[12rem] w-full rounded-t-lg object-fill lg:h-[10rem] lg:w-[24rem] ${
+    !image?.image && "bg-zinc-700"
+  } `}
+  src={image.image ? image.image : imageNotAvailable}
+  alt=''
+/> */
+}
