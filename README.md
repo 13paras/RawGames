@@ -35,6 +35,9 @@ This app is built with Vite + React, TailwindCSS, and Redux. It uses the RAWG AP
     npm run dev
     ```
 
+   # Demo
+   You can see live demo <a href="https://raw-games.vercel.app/" target="_blank" rel="noreferrer">here</a>
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
