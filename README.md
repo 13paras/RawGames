@@ -14,7 +14,7 @@ This app is built with Vite + React, TailwindCSS, and Redux. It uses the RAWG AP
 1. To get started with this project, run
 
 ```bash
-  [https://github.com/13paras/cryptomania.git](https://github.com/13paras/RawGames.git)
+  https://github.com/13paras/RawGames.git
 ```
 
 2. Navigate into the project directory:
